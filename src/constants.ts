@@ -763,10 +763,10 @@ export const feedbackPalettePreset: FeedbackPalettePreset = {
    */
   classic: {
     light: {
-      destructive: 'red.600',
-      success: 'green.600',
-      warning: 'yellow.600',
-      info: 'blue.600'
+      destructive: 'red.500',
+      success: 'green.500',
+      warning: 'yellow.500',
+      info: 'blue.500'
     },
     dark: {
       destructive: 'red.400',
@@ -1016,15 +1016,15 @@ export const feedbackPalettePreset: FeedbackPalettePreset = {
   light: {
     light: {
       destructive: 'red.500',
-      success: 'green.500',
-      warning: 'yellow.500',
-      info: 'blue.500'
+      success: 'emerald.500',
+      warning: 'amber.500',
+      info: 'sky.500'
     },
     dark: {
       destructive: 'red.400',
-      success: 'green.400',
-      warning: 'yellow.400',
-      info: 'blue.400'
+      success: 'emerald.400',
+      warning: 'amber.400',
+      info: 'sky.400'
     }
   }
 };
