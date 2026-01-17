@@ -1,6 +1,16 @@
 # Changelog
 
 
+## [v0.0.10](https://github.com/soybeanjs/shadcn-theme/compare/v0.0.9...v0.0.10) (2026-01-17)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **constants**: update border and input colors in basePalettePreset to a darker shade &nbsp;-&nbsp; by @soybeanjs [<samp>(c619b)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/c619b39)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.0.9](https://github.com/soybeanjs/shadcn-theme/compare/v0.0.8...v0.0.9) (2026-01-17)
 
 ### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
