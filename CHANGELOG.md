@@ -1,6 +1,16 @@
 # Changelog
 
 
+## [v0.0.5](https://github.com/soybeanjs/shadcn-theme/compare/v0.0.4...v0.0.5) (2026-01-17)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **core**: prepend CSS variable keys with '--' for proper syntax &nbsp;-&nbsp; by @soybeanjs [<samp>(da834)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/da834b4)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.0.4](https://github.com/soybeanjs/shadcn-theme/compare/v0.0.3...v0.0.4) (2026-01-17)
 
 ### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
