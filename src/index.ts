@@ -1,4 +1,11 @@
-export { basePaletteKey, themePaletteKey, feedbackPaletteKey } from './constants';
+export {
+  basePalettePreset,
+  themePalettePreset,
+  feedbackPalettePreset,
+  basePaletteKey,
+  themePaletteKey,
+  feedbackPaletteKey
+} from './constants';
 export { createShadcnTheme } from './core';
 
 export type {

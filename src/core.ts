@@ -2,11 +2,11 @@ import { colord } from '@soybeanjs/colord';
 import { generatePalette, tailwindPalette, tailwindPaletteHsl } from '@soybeanjs/colord/palette';
 import type { PaletteColorLevel, TailwindPaletteKey } from '@soybeanjs/colord/palette';
 import {
-  BASE_PALETTE_PRESET,
   DARK_SELECTOR,
-  FEEDBACK_PALETTE_PRESET,
-  THEME_PALETTE_PRESET,
-  THEME_VARIABLES
+  THEME_VARIABLES,
+  basePalettePreset,
+  feedbackPalettePreset,
+  themePalettePreset
 } from './constants';
 import { isTailwindPaletteLevelColorKey, keysOf, mountCSSVariables, removeHslBrackets } from './shared';
 import type {
@@ -42,9 +42,9 @@ export function createShadcnTheme(options?: ThemeOptions) {
 function generateColorPreset(presets?: PresetConfig) {
   const { base = 'slate', theme = 'indigo', feedback = 'classic' } = presets || {};
 
-  const basePalette = BASE_PALETTE_PRESET[base];
-  const themePalette = THEME_PALETTE_PRESET[theme];
-  const feedbackPalette = FEEDBACK_PALETTE_PRESET[feedback];
+  const basePalette = basePalettePreset[base];
+  const themePalette = themePalettePreset[theme];
+  const feedbackPalette = feedbackPalettePreset[feedback];
 
   const preset = {
     light: {

@@ -70,7 +70,7 @@ export const DARK_SELECTOR = {
   media: '@media (prefers-color-scheme: dark)'
 } as const satisfies Record<DarkSelector, string>;
 
-export const BASE_PALETTE_PRESET: BasePalettePreset = {
+export const basePalettePreset: BasePalettePreset = {
   stone: {
     light: {
       background: 'oklch(100% 0 0)',
@@ -313,7 +313,7 @@ export const BASE_PALETTE_PRESET: BasePalettePreset = {
   }
 };
 
-export const THEME_PALETTE_PRESET: ThemePalettePreset = {
+export const themePalettePreset: ThemePalettePreset = {
   stone: {
     light: {
       primary: 'stone.900',
@@ -756,7 +756,7 @@ export const THEME_PALETTE_PRESET: ThemePalettePreset = {
   }
 };
 
-export const FEEDBACK_PALETTE_PRESET: FeedbackPalettePreset = {
+export const feedbackPalettePreset: FeedbackPalettePreset = {
   /**
    * Classic standard combination for most scenarios
    * 经典标准 . 最常见的组合，适用于大多数场景
@@ -1029,8 +1029,8 @@ export const FEEDBACK_PALETTE_PRESET: FeedbackPalettePreset = {
   }
 };
 
-export const basePaletteKey = Object.keys(BASE_PALETTE_PRESET) as BasePaletteKey[];
+export const basePaletteKey = Object.keys(basePalettePreset) as BasePaletteKey[];
 
-export const themePaletteKey = Object.keys(THEME_PALETTE_PRESET) as ThemePaletteKey[];
+export const themePaletteKey = Object.keys(themePalettePreset) as ThemePaletteKey[];
 
-export const feedbackPaletteKey = Object.keys(FEEDBACK_PALETTE_PRESET) as FeedbackPaletteKey[];
+export const feedbackPaletteKey = Object.keys(feedbackPalettePreset) as FeedbackPaletteKey[];
