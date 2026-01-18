@@ -1,6 +1,20 @@
 # Changelog
 
 
+## [v0.1.0](https://github.com/soybeanjs/shadcn-theme/compare/v0.0.11...v0.1.0) (2026-01-19)
+
+### &nbsp;&nbsp;&nbsp;🚨 Breaking Changes
+
+- **projects**: refactor theme presets and optimize types &nbsp;-&nbsp; by @soybeanjs [<samp>(fc921)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/fc92148)
+
+### &nbsp;&nbsp;&nbsp;📖 Documentation
+
+- **README**: update README &nbsp;-&nbsp; by @soybeanjs [<samp>(68b5a)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/68b5a88)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.0.11](https://github.com/soybeanjs/shadcn-theme/compare/v0.0.10...v0.0.11) (2026-01-18)
 
 ### &nbsp;&nbsp;&nbsp;🚨 Breaking Changes
