@@ -44,7 +44,7 @@
     "update-pkg": "soy ncu"
   },
   "dependencies": {
-    "@soybeanjs/colord": "^0.3.4"
+    "@soybeanjs/colord": "^0.3.5"
   },
   "devDependencies": {
     "@soybeanjs/cli": "1.4.4",
