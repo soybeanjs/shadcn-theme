@@ -1,5 +1,16 @@
 # Changelog
 
+## [v0.3.2](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.1...v0.3.2) (2026-05-23)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: update deps &nbsp;-&nbsp; by @soybeanjs [<samp>(89644)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/8964454)
+- **project**: update pnpm version to v11 &nbsp;-&nbsp; by @soybeanjs [<samp>(fac0a)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/fac0ae6)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.3.1](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.0...v0.3.1) (2026-02-07)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
