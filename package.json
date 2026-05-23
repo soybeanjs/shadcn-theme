@@ -66,5 +66,5 @@
   "lint-staged": {
     "*": "oxlint --fix && oxfmt"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@11.2.2"
 }

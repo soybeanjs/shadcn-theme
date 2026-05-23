@@ -1,0 +1,6 @@
+shamefullyHoist: true
+minimumReleaseAge: 0
+allowBuilds:
+  esbuild: false
+  simple-git-hooks: false
+  unrs-resolver: false
