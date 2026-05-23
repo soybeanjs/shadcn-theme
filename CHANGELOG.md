@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.3.3](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.2...v0.3.3) (2026-05-23)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **tsdown**: update dependencies configuration &nbsp;-&nbsp; by @soybeanjs [<samp>(264f7)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/264f7c0)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.3.2](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.1...v0.3.2) (2026-05-23)
 
 ### &nbsp;&nbsp;&nbsp;🏡 Chore
