@@ -13,7 +13,7 @@ import type {
   SidebarPresetColorKey,
   DarkSelector,
   OKLCHColor,
-  PresetKeyConfig
+  ThemeOptions
 } from './types';
 
 export const RADIUS_VARIABLE = '--radius';
@@ -74,12 +74,13 @@ export const EXTENDED_THEME_VARIABLES = {
   sidebarBorderAlpha: '--sidebar-border-alpha'
 };
 
-export const DEFAULT_PRESET_KEY = {
+export const DEFAULT_PRESET_OPTIONS = {
   base: 'zinc',
   primary: 'indigo',
   feedback: 'classic',
-  sidebar: 'extended'
-} as const satisfies PresetKeyConfig;
+  sidebar: 'extended',
+  radius: '0.625rem'
+} as const satisfies ThemeOptions;
 
 /**
  * dark mode selectors

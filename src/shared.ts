@@ -1,10 +1,44 @@
 import { colord } from '@soybeanjs/colord';
 import { tailwindPalette, simplePalette } from '@soybeanjs/colord/palette';
 import type { PaletteColorLevel, TailwindPaletteKey, TailwindPaletteLevelColorKey } from '@soybeanjs/colord/palette';
-import type { ColorFormat, ColorValue, PresetConfig } from './types';
+import { DEFAULT_PRESET_OPTIONS } from './constants';
+import type { ColorFormat, ColorValue, PresetConfig, RequiredThemeOptions, ThemeOptions } from './types';
 
 export function keysOf<TRecord extends Record<string, unknown>>(record: TRecord) {
   return Object.keys(record) as (keyof TRecord)[];
+}
+
+export function mergeObjects<T extends Record<string, any>>(base: T, ...objects: Partial<T>[]): T {
+  const result: Record<string, any> = { ...base };
+
+  objects.forEach(obj => {
+    Object.keys(obj).forEach(key => {
+      const value = obj[key as keyof typeof obj];
+      if (value !== undefined) {
+        result[key] = value;
+      }
+    });
+  });
+
+  return result as T;
+}
+
+type DefaultPresetOptions = Pick<RequiredThemeOptions, 'base' | 'primary' | 'feedback' | 'sidebar' | 'radius'>;
+
+export function isDefaultPresetOptions(
+  options?: ThemeOptions,
+  defaults: DefaultPresetOptions = DEFAULT_PRESET_OPTIONS
+) {
+  if (!options) {
+    return true;
+  }
+
+  const keys = Object.keys(defaults) as (keyof DefaultPresetOptions)[];
+
+  return keys.every(key => {
+    const value = options[key];
+    return value === undefined || value === defaults[key];
+  });
 }
 
 export function isTailwindPaletteLevelColorKey(color: ColorValue): color is TailwindPaletteLevelColorKey {

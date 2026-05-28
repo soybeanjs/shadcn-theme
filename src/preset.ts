@@ -1,5 +1,5 @@
 import {
-  DEFAULT_PRESET_KEY,
+  DEFAULT_PRESET_OPTIONS,
   builtinBasePreset,
   builtinFeedbackPreset,
   builtinPrimaryPreset,
@@ -63,16 +63,16 @@ function getBuiltinThemePreset(config: Required<PresetKeyConfig>) {
   let { base, primary, feedback, sidebar } = config;
 
   if (base === 'custom') {
-    base = DEFAULT_PRESET_KEY.base;
+    base = DEFAULT_PRESET_OPTIONS.base;
   }
   if (primary === 'custom') {
-    primary = DEFAULT_PRESET_KEY.primary;
+    primary = DEFAULT_PRESET_OPTIONS.primary;
   }
   if (feedback === 'custom') {
-    feedback = DEFAULT_PRESET_KEY.feedback;
+    feedback = DEFAULT_PRESET_OPTIONS.feedback;
   }
   if (sidebar === 'custom') {
-    sidebar = DEFAULT_PRESET_KEY.sidebar;
+    sidebar = DEFAULT_PRESET_OPTIONS.sidebar;
   }
 
   const basePreset = builtinBasePreset[base];

@@ -305,3 +305,7 @@ export interface ThemeOptions extends PresetConfig, ThemeRadius {
    */
   format?: ColorFormat;
 }
+
+export interface RequiredThemeOptions extends Required<Omit<ThemeOptions, 'preset'>> {
+  preset?: CustomThemeColorPreset;
+}

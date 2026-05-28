@@ -1,21 +1,20 @@
-import { DEFAULT_PRESET_KEY } from './constants';
+import { DEFAULT_PRESET_OPTIONS } from './constants';
 import { generateThemePreset } from './preset';
 import { generateCSSVariables, generateRadiusCSSVariable } from './css';
-import { getColorPresetCacheKey } from './shared';
-import type { PresetConfig, PresetKeyConfig, ThemeOptions } from './types';
+import { mergeObjects, getColorPresetCacheKey } from './shared';
+import type { PresetConfig, PresetKeyConfig, ThemeOptions, RequiredThemeOptions } from './types';
 
 export function createShadcnTheme(options?: ThemeOptions) {
-  const {
-    base = DEFAULT_PRESET_KEY.base,
-    primary = DEFAULT_PRESET_KEY.primary,
-    feedback = DEFAULT_PRESET_KEY.feedback,
-    sidebar = DEFAULT_PRESET_KEY.sidebar,
-    preset,
-    radius = '0.625rem',
-    styleTarget = ':root',
-    darkSelector = 'class',
-    format = 'hsl'
-  } = options || {};
+  const opts = mergeObjects<RequiredThemeOptions>(
+    {
+      ...DEFAULT_PRESET_OPTIONS,
+      styleTarget: ':root',
+      darkSelector: 'class',
+      format: 'hsl'
+    },
+    options ?? {}
+  );
+  const { base, primary, feedback, sidebar, radius, styleTarget, darkSelector, format, preset } = opts;
 
   const colorCssCache = new Map<string, string>();
 
@@ -27,9 +26,15 @@ export function createShadcnTheme(options?: ThemeOptions) {
       sidebar: config?.sidebar ?? sidebar
     };
 
+    const shouldUseColorCssCache =
+      mergedConfig.base !== 'custom' &&
+      mergedConfig.primary !== 'custom' &&
+      mergedConfig.feedback !== 'custom' &&
+      mergedConfig.sidebar !== 'custom';
+
     const cacheKey = getColorPresetCacheKey(mergedConfig);
 
-    if (colorCssCache.has(cacheKey)) {
+    if (shouldUseColorCssCache && colorCssCache.has(cacheKey)) {
       return colorCssCache.get(cacheKey)!;
     }
 
@@ -37,7 +42,9 @@ export function createShadcnTheme(options?: ThemeOptions) {
 
     const css = generateCSSVariables(themePreset, { styleTarget, darkSelector, format });
 
-    colorCssCache.set(cacheKey, css);
+    if (shouldUseColorCssCache) {
+      colorCssCache.set(cacheKey, css);
+    }
 
     return css;
   };
