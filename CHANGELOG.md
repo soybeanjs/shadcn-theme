@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.3.4](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.3...v0.3.4) (2026-05-28)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **theme**: update theme options structure and improve merging logic &nbsp;-&nbsp; by @soybeanjs [<samp>(b347e)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/b347e24)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: update deps &nbsp;-&nbsp; by @soybeanjs [<samp>(5496b)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/5496b88)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.3.3](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.2...v0.3.3) (2026-05-23)
 
 ### &nbsp;&nbsp;&nbsp;🛠 Optimizations
