@@ -52,8 +52,8 @@
     "@soybeanjs/cli": "1.7.2",
     "@types/node": "25.9.1",
     "lint-staged": "17.0.5",
-    "oxfmt": "^0.51.0",
-    "oxlint": "^1.66.0",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0",
     "simple-git-hooks": "2.13.1",
     "tsdown": "0.22.0",
     "tsx": "4.22.3",
@@ -66,5 +66,5 @@
   "lint-staged": {
     "*": "oxlint . --fix && oxfmt"
   },
-  "packageManager": "pnpm@11.2.2"
+  "packageManager": "pnpm@11.4.0"
 }
