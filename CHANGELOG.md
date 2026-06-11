@@ -1,5 +1,20 @@
 # Changelog
 
+## [v0.5.0](https://github.com/soybeanjs/shadcn-theme/compare/v0.4.0...v0.5.0) (2026-06-11)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **constants**: update preset keys to include additional colors and improve type definitions &nbsp;-&nbsp; by @soybeanjs [<samp>(4d3cd)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/4d3cd02)
+- **theme**: enhance radius handling with new Radii type and update default radius value &nbsp;-&nbsp; by @soybeanjs [<samp>(d1532)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/d1532ad)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **shared**: remove unused isDefaultPresetOptions function and related imports &nbsp;-&nbsp; by @soybeanjs [<samp>(ff558)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/ff55883)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.4.0](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.4...v0.4.0) (2026-06-11)
 
 ### &nbsp;&nbsp;&nbsp;🛠 Optimizations
