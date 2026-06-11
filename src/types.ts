@@ -5,13 +5,18 @@ import type {
   SimplePaletteKey
 } from '@soybeanjs/colord/palette';
 
+/**
+ * the theme options
+ */
+export type Radii = 'none' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
+
 export interface ThemeRadius {
   /**
    * the border radius
    *
-   * @default '0.625rem'
+   * @default 'md'
    */
-  radius?: string;
+  radius?: Radii | (string & {});
 }
 
 export type HSLColor = `hsl(${number} ${number}% ${number}%)` | `hsl(${number} ${number}% ${number}% / ${number})`;
@@ -275,11 +280,6 @@ export interface PresetConfig extends PresetKeyConfig {
 }
 
 /**
- * the theme options
- */
-export type Radii = 'none' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
-
-/**
  * theme options
  */
 export interface ThemeOptions extends PresetConfig, ThemeRadius {
@@ -317,5 +317,10 @@ export interface ThemeOptions extends PresetConfig, ThemeRadius {
 }
 
 export interface RequiredThemeOptions extends Required<Omit<ThemeOptions, 'preset'>> {
+  /**
+   * custom preset colors
+   *
+   * @description only used when preset is provided and one of the preset keys is 'custom'
+   */
   preset?: CustomThemeColorPreset;
 }

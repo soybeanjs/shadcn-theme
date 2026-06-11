@@ -1347,11 +1347,64 @@ export const builtinFeedbackPreset: Record<BuiltinFeedbackPresetKey, FeedbackPre
   }
 };
 
-export const builtinBasePresetKeys = keysOf(builtinBasePreset);
+export const builtinBasePresetKeys = keysOf(builtinBasePreset) as [
+  'slate',
+  'mist',
+  'gray',
+  'zinc',
+  'neutral',
+  'stone',
+  'taupe',
+  'olive',
+  'mauve'
+];
 
-export const builtinPrimaryPresetKeys = keysOf(builtinPrimaryPreset);
+export const builtinPrimaryPresetKeys = keysOf(builtinPrimaryPreset) as [
+  'slate',
+  'mist',
+  'gray',
+  'zinc',
+  'neutral',
+  'stone',
+  'taupe',
+  'olive',
+  'mauve',
+  'red',
+  'orange',
+  'amber',
+  'yellow',
+  'lime',
+  'green',
+  'emerald',
+  'teal',
+  'cyan',
+  'sky',
+  'blue',
+  'indigo',
+  'violet',
+  'purple',
+  'fuchsia',
+  'pink',
+  'rose'
+];
 
-export const builtinFeedbackPresetKeys = keysOf(builtinFeedbackPreset);
+export const builtinFeedbackPresetKeys = keysOf(builtinFeedbackPreset) as [
+  'classic',
+  'vivid',
+  'subtle',
+  'warm',
+  'cool',
+  'nature',
+  'modern',
+  'vibrant',
+  'professional',
+  'soft',
+  'bold',
+  'calm',
+  'candy',
+  'deep',
+  'light'
+];
 
 export const basePresetColorKeys: BasePresetColorKey[] = keysOf(builtinBasePreset['zinc'].light);
 
