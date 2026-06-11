@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.4.0](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.4...v0.4.0) (2026-06-11)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **projects**: reorder imports and improve code formatting in core, shared, and types modules &nbsp;-&nbsp; by @soybeanjs [<samp>(b76c0)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/b76c0bd)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **theme**: update color presets to include new shades and improve structure &nbsp;-&nbsp; by @soybeanjs [<samp>(38b6b)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/38b6b55)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **projects**: update pnpm workspace configuration and add vite config &nbsp;-&nbsp; by @soybeanjs [<samp>(87870)</samp>](https://github.com/soybeanjs/shadcn-theme/commit/878700d)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.3.4](https://github.com/soybeanjs/shadcn-theme/compare/v0.3.3...v0.3.4) (2026-05-28)
 
 ### &nbsp;&nbsp;&nbsp;💅 Refactors
