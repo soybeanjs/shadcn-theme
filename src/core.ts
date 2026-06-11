@@ -2,7 +2,7 @@ import { DEFAULT_PRESET_OPTIONS } from './constants';
 import { mergeObjects, getColorPresetCacheKey } from './shared';
 import { generateCSSVariables, generateRadiusCSSVariable } from './css';
 import { generateThemePreset } from './preset';
-import type { PresetConfig, PresetKeyConfig, ThemeOptions, RequiredThemeOptions } from './types';
+import type { PresetConfig, PresetKeyConfig, ThemeOptions, RequiredThemeOptions, Radii } from './types';
 
 export function createShadcnTheme(options?: ThemeOptions) {
   const opts = mergeObjects<RequiredThemeOptions>(
@@ -49,9 +49,9 @@ export function createShadcnTheme(options?: ThemeOptions) {
     return css;
   };
 
-  const getRadiusCss = (update?: string) => generateRadiusCSSVariable(update ?? radius, styleTarget);
+  const getRadiusCss = (update?: Radii | (string & {})) => generateRadiusCSSVariable(update ?? radius, styleTarget);
 
-  const getCss = (config?: PresetConfig, radiusValue?: string) => {
+  const getCss = (config?: PresetConfig, radiusValue?: Radii | (string & {})) => {
     const radiusCss = getRadiusCss(radiusValue ?? radius);
     const css = getColorCss(config);
 

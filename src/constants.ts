@@ -13,7 +13,8 @@ import type {
   SidebarPresetColorKey,
   DarkSelector,
   OKLCHColor,
-  ThemeOptions
+  ThemeOptions,
+  Radii
 } from './types';
 
 export const RADIUS_VARIABLE = '--radius';
@@ -79,7 +80,7 @@ export const DEFAULT_PRESET_OPTIONS = {
   primary: 'indigo',
   feedback: 'classic',
   sidebar: 'extended',
-  radius: '0.625rem'
+  radius: 'md'
 } as const satisfies ThemeOptions;
 
 /**
@@ -93,6 +94,18 @@ export const DARK_SELECTOR = {
 const DARK_BORDER: OKLCHColor = 'oklch(100% 0 0 / 0.1)';
 
 const DARK_INPUT: OKLCHColor = 'oklch(100% 0 0 / 0.15)';
+
+export const RADII = {
+  none: '0px',
+  '2xs': '0.25rem',
+  xs: '0.375rem',
+  sm: '0.5rem',
+  md: '0.625rem',
+  lg: '0.75rem',
+  xl: '0.875rem',
+  '2xl': '1rem',
+  full: '9999px'
+} satisfies Record<Radii, string>;
 
 /**
  * builtin base color preset

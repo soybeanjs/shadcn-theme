@@ -275,15 +275,20 @@ export interface PresetConfig extends PresetKeyConfig {
 }
 
 /**
+ * the theme options
+ */
+export type Radii = 'none' | '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'full';
+
+/**
  * theme options
  */
 export interface ThemeOptions extends PresetConfig, ThemeRadius {
   /**
    * the border radius
    *
-   * @default 0.625rem
+   * @default 'md'
    */
-  radius?: string;
+  radius?: Radii | (string & {});
   /**
    * the style target
    *

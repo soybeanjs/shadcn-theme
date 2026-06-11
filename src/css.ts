@@ -1,5 +1,5 @@
 import { generatePalette } from '@soybeanjs/colord/palette';
-import { COLOR_VARIABLES, DARK_SELECTOR, EXTENDED_THEME_VARIABLES, RADIUS_VARIABLE } from './constants';
+import { COLOR_VARIABLES, DARK_SELECTOR, EXTENDED_THEME_VARIABLES, RADIUS_VARIABLE, RADII } from './constants';
 import { getColorValue, keysOf, removeHslBrackets, isUnTransformedColor } from './shared';
 import type {
   ColorFormat,
@@ -10,7 +10,8 @@ import type {
   ThemeColorPreset,
   ThemeColorWithAlphaKey,
   ThemeColors,
-  ThemeOptions
+  ThemeOptions,
+  Radii
 } from './types';
 
 export function generateCSSVariables(
@@ -44,8 +45,10 @@ export function generateCSSVariables(
   return css;
 }
 
-export function generateRadiusCSSVariable(radius: string, styleTarget: StyleTarget = ':root') {
-  const css = `${styleTarget} {\n${RADIUS_VARIABLE}: ${radius};\n}`;
+export function generateRadiusCSSVariable(radius: Radii | (string & {}), styleTarget: StyleTarget = ':root') {
+  const radiusValue = RADII[radius as Radii] ?? radius;
+
+  const css = `${styleTarget} {\n${RADIUS_VARIABLE}: ${radiusValue};\n}`;
 
   return css;
 }
