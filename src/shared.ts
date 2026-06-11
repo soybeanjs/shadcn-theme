@@ -54,10 +54,8 @@ export const isUnTransformedColor = (color: ColorValue) => {
 };
 
 export function getColorValue(colorValue: ColorValue, format: ColorFormat) {
-  let color: string = colorValue;
-
   if (isUnTransformedColor(colorValue)) {
-    return color;
+    return colorValue;
   }
 
   if (colorValue === 'black') {
@@ -71,15 +69,17 @@ export function getColorValue(colorValue: ColorValue, format: ColorFormat) {
   if (isTailwindPaletteLevelColorKey(colorValue)) {
     const [paletteKey, level] = colorValue.split('.') as [TailwindPaletteKey, PaletteColorLevel];
 
-    color = tailwindPalette[paletteKey][level][format];
-  } else {
-    if (format === 'hsl' && colorValue.startsWith('oklch(')) {
-      color = colord(colorValue).toHslString();
-    }
+    return tailwindPalette[paletteKey][level][format];
+  }
 
-    if (format === 'oklch' && colorValue.startsWith('hsl(')) {
-      color = colord(colorValue).toOklchString();
-    }
+  let color: string = colorValue;
+
+  if (format === 'hsl' && colorValue.startsWith('oklch(')) {
+    color = colord(colorValue).toHslString();
+  }
+
+  if (format === 'oklch' && colorValue.startsWith('hsl(')) {
+    color = colord(colorValue).toOklchString();
   }
 
   return color;

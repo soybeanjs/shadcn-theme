@@ -1,7 +1,7 @@
 import { DEFAULT_PRESET_OPTIONS } from './constants';
-import { generateThemePreset } from './preset';
-import { generateCSSVariables, generateRadiusCSSVariable } from './css';
 import { mergeObjects, getColorPresetCacheKey } from './shared';
+import { generateCSSVariables, generateRadiusCSSVariable } from './css';
+import { generateThemePreset } from './preset';
 import type { PresetConfig, PresetKeyConfig, ThemeOptions, RequiredThemeOptions } from './types';
 
 export function createShadcnTheme(options?: ThemeOptions) {

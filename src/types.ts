@@ -1,4 +1,9 @@
-import type { TailwindPaletteKey, TailwindPaletteLevelColorKey, SimplePaletteKey } from '@soybeanjs/colord/palette';
+import type {
+  TailwindPaletteKey,
+  TailwindNeutralPaletteKey,
+  TailwindPaletteLevelColorKey,
+  SimplePaletteKey
+} from '@soybeanjs/colord/palette';
 
 export interface ThemeRadius {
   /**
@@ -121,7 +126,7 @@ export type ThemeColorWithAlphaKey = keyof Pick<ThemeColors, 'border' | 'input' 
 /**
  * the built-in base color preset key
  */
-export type BuiltinBasePresetKey = Extract<TailwindPaletteKey, 'neutral' | 'stone' | 'zinc' | 'slate' | 'gray'>;
+export type BuiltinBasePresetKey = TailwindNeutralPaletteKey;
 
 /**
  * the built-in primary color preset key
