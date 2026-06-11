@@ -7,7 +7,6 @@ export {
   builtinFeedbackPresetKeys,
   DEFAULT_PRESET_OPTIONS
 } from './constants';
-export { isDefaultPresetOptions } from './shared';
 export { createShadcnTheme } from './core';
 
 export type {
